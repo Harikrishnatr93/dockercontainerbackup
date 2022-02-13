@@ -25,4 +25,7 @@ docker commit $DOCKERIMAGE $IMAGE_NAME:$VERSION
 
 docker push $IMAGE_NAME:$VERSION
 
+################
+#Removing old unused images from the localend which was created more than 15days ago
+
 docker image prune -a --filter "until=336h" -f
